@@ -1,0 +1,77 @@
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    height: 60px;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .navlogo {
+    color: #fff;
+    font-size: 25px;
+    text-decoration: none;
+  }
+  
+  .navbar-menu {
+    font-size: 20px;
+    list-style: none;
+    display: flex;
+  }
+  
+  .navmenu{
+    margin-right: 20px;
+  }
+  .portlogo{
+    width: 125px;
+  }
+  
+  .navbar-menu-active{
+    display: flex;
+    list-style: none;
+flex-direction: column;
+position: absolute;
+font-size: 20px;
+text-align: center;
+top: 60px;
+left: 0;
+width: 100%;
+background-color: #333;
+padding: 20px 0;
+}
+.navbar-menu-active li{
+    margin-bottom: 15px;
+}
+.navmenu{
+    color: #fff;
+    text-decoration: none;
+}
+
+  .navmenu{
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .hamburger{
+    display: none !important;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-menu {
+      display: none;
+    }
+    .hamburger{
+        display: block !important;
+        color: #fff;
+        font-size: 35px !important;
+    }
+    
+  }
+  

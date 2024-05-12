@@ -1,0 +1,99 @@
+.home {
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    height: 90vh;
+    width: 100%;
+    justify-content: center;
+    
+  }
+  .namelogo{
+    width: 200px;
+
+  }
+
+  .intro{
+    display: flex;
+  }
+
+  .portimg img{
+    width: 300px;
+    margin-right: 50px;
+    border-radius: 50%;
+    margin-left: 60px;
+  }
+  
+  
+  .home-container {
+    
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-left: 20px;
+  }
+  
+  .home h1 {
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  .socials{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .home p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #555;
+  }
+  @media (max-width:750px) {
+    .intro{
+        width: 100%;
+        display: flex;
+        flex-flow: column-reverse;
+    }
+    .portimg img{
+        margin-right: 0;
+        width: 200px;
+        margin-left: 0;
+    }
+    .portimg{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+
+    }
+    .home{
+        min-height: 90vh;
+        height: auto;
+        padding-top: 30px;
+    }
+    .btn{
+        margin-top: 10px;
+        margin-left: 5px;
+        margin-bottom: 20px;
+    }
+    h2,h1{
+        margin-top: 10px;
+        padding: 5px;
+        margin: 0 5px;
+
+    }
+    
+    
+  }

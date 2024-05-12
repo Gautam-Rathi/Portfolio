@@ -1,0 +1,112 @@
+.skills {
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  min-height: 90vh;
+  width: 100%;
+  justify-content: center;
+  }
+  .caro{
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+  .skills-container {
+    max-width: 100%;
+    
+  }
+ 
+  
+  .skills h1 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .skills h2{
+    margin-left: 20px;
+  }
+ 
+  .skill_img{
+    display: flex;
+    align-items: center;
+    height: 150px;
+  }
+  .skill img{
+
+    border-radius: 50%;
+    width: 100px;
+  }
+  
+  @media (max-width: 768px) {
+    /* .skill {
+      flex: 0 0 100%; 
+    } */
+    .skills{
+        min-height: 90vh;
+        height: auto;
+    }
+  }
+  
+  .skill h3 {
+    font-size: 1.2rem;
+  }
+  
+  .skill-bar {
+    background-color: #f2f2f2;
+    height: 20px;
+    border-radius: 10px;
+  }
+  
+  .skill-level {
+    height: 100%;
+    border-radius: 10px;
+  }
+  
+
+  .skill .Express {
+    width: 80%;
+    background-color: #00c8ff; 
+  }
+
+  .skill .Mongo-DB {
+    width: 80%;
+    background-color: #00971c; 
+  }
+
+  .skill .Java {
+    width: 80%;
+    background-color: #ff9143; 
+  }
+
+  .skill .DSA {
+    width: 75%;
+    background-color: #ff1e38; 
+  }
+  
+  .skill .Nodejs {
+    width: 80%;
+    background-color: #13e300; 
+  }
+  
+  .skill .Reactjs {
+    width: 85%;
+    background-color: #61dafb; 
+  }
+  .skill .HTML {
+    width: 85%;
+    background-color: #ff840a; 
+  }
+  .skill .CSS {
+    width: 85%;
+    background-color: #61dafb; 
+  }
+  .skill .Js {
+    width: 85%;
+    background-color: #e9e500; 
+  }
+  .skill .JWT-Auth {
+    width: 85%;
+    background-color: #e17fff; 
+  }
+  
+ 
+  
