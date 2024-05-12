@@ -1,4 +1,4 @@
-import React, { useState,useRef } from 'react';
+import React, { useState,useRef,useEffect } from 'react';
 import './ContactForm.css'; 
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
@@ -6,6 +6,8 @@ import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import { Divider } from '@mui/material';
 import emailjs from '@emailjs/browser';
+import Box from '@mui/material/Box';
+import LinearProgress from '@mui/material/LinearProgress';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +15,14 @@ const ContactForm = () => {
       reply_to: '',
       message: ''
   });
+
+  const [page,setPage] = useState(false);
+  useEffect(()=>{
+    setTimeout(()=>{
+      return(setPage(true))
+    },500)
+
+  },[])
 
   const form = useRef();
 
@@ -63,6 +73,8 @@ const ContactForm = () => {
 
   return (
     <div className='contactbackcolor'>
+        {
+        page?<>
     <div className="contactdata"> My Mail & Phone No. -
         <MailOutlineIcon onClick={()=>{return(toast.info("gautamrathicode@gmail.com"))}} style={{color:"red"}}/>
         <LocalPhoneIcon onClick={()=>{return(toast.info("7289989372"))}} style={{color:"blue"}}/>
@@ -108,7 +120,9 @@ const ContactForm = () => {
         <button type="submit" className="contactbtn">Submit</button>
       </form>
     </div>
-    <ToastContainer/>
+    <ToastContainer/></>:<Box className="boxanimation" sx={{ width: '100%' }}>
+    <LinearProgress />
+  </Box>}
     </div>
   );
 };

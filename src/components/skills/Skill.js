@@ -1,11 +1,21 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import './skill.css';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { frontskills,backskills,programmingskills } from './skilldata';
 import { Divider } from '@mui/material';
+import Box from '@mui/material/Box';
+import LinearProgress from '@mui/material/LinearProgress';
 
 const Skills = () => {
+
+    const [page,setPage] = useState(false);
+  useEffect(()=>{
+    setTimeout(()=>{
+      return(setPage(true))
+    },500)
+
+  },[])
     const responsive = {
         superLargeDesktop: {
 
@@ -26,14 +36,9 @@ const Skills = () => {
         }
     };
     return (
-        //   <div className="skill">
-        //             <h3>HTML/CSS</h3>
-        //             <div className="skill-bar">
-        //               <div className="skill-level html"></div>
-        //             </div>
-        //           </div>
-        <section className="skills">
-            <div className="skills-container">
+        
+        <>
+            {page?<section className="skills"><div className="skills-container">
                 <h1>SKILLS</h1>
 
                 <Divider className='divi'/>
@@ -149,8 +154,11 @@ const Skills = () => {
                     }
 
                 </Carousel>
-            </div>
-        </section>
+            </div></section>:<Box className="boxanimation" sx={{ width: '100%' }}>
+      <LinearProgress />
+    </Box>}
+    </>
+        
     );
 };
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import './home.css'; 
 import {data} from "../../portdata"
 import { NavLink } from 'react-router-dom';
@@ -8,10 +8,20 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+  import Box from '@mui/material/Box';
+import LinearProgress from '@mui/material/LinearProgress';
 
 const Home = () => {
+  const [page,setPage] = useState(false);
+  useEffect(()=>{
+    setTimeout(()=>{
+      return(setPage(true))
+    },500)
+
+  },[])
   return (
-    <section className="home">
+    <>
+    {page?<section className="home">
       <div className="intro">
       <div className="home-container">
         <h2>Welcome to My Portfolio</h2>
@@ -32,9 +42,12 @@ const Home = () => {
       <div className="portimg">
         <img src="./portimg.png" alt="" />
       </div>
-      </div>
+      </div></section>:<Box className="boxanimation" sx={{ width: '100%' }}>
+      <LinearProgress />
+    </Box>}
       <ToastContainer />
-    </section>
+      </>
+    
   );
 };
 
