@@ -9,9 +9,9 @@ import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    from_name: '',
+      reply_to: '',
+      message: ''
   });
 
   const form = useRef();
@@ -28,6 +28,15 @@ const ContactForm = () => {
     e.preventDefault();
     
     console.log(formData);
+    const {from_name,reply_to,message} = formData;
+    if(!from_name || !reply_to || !message){
+        toast.warn("Please Fill All Fields")
+    }
+    else if(!reply_to.includes("@")){
+        toast.warn("Invalid mail")
+
+    }
+    else{
 
     emailjs
       .sendForm(process.env.REACT_APP_SERVICE, process.env.REACT_APP_TEMPLATE, form.current, {
@@ -36,9 +45,11 @@ const ContactForm = () => {
       .then(
         () => {
           console.log('SUCCESS!');
+          toast.success("Mail Sent")
         },
         (error) => {
           console.log('FAILED...', error.text);
+          toast.warn("FAILED ERROR OCCURED")
         },
       );
     
@@ -47,6 +58,7 @@ const ContactForm = () => {
       reply_to: '',
       message: ''
     });
+}
   };
 
   return (
@@ -69,18 +81,18 @@ const ContactForm = () => {
             name="from_name"
             value={formData.from_name}
             onChange={handleChange}
-            required
+            
           />
         </div>
         <div className="form-group">
           <label htmlFor="reply_to">Email:</label>
           <input
-            type="email"
+            type="text"
             id="email"
             name="reply_to"
             value={formData.reply_to}
             onChange={handleChange}
-            required
+            
           />
         </div>
         <div className="form-group">
@@ -90,7 +102,7 @@ const ContactForm = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            required
+            
           ></textarea>
         </div>
         <button type="submit" className="contactbtn">Submit</button>
