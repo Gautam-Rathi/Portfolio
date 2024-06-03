@@ -51,14 +51,22 @@ z-index: 3;
 .navbar-menu-active li{
     margin-bottom: 15px;
 }
-.navmenu{
-    color: #fff;
-    text-decoration: none;
-}
 
   .navmenu{
     color: #fff;
     text-decoration: none;
+    transition: color 0.2s;
+  }
+  .navmenu:hover{
+    color: violet;
+
+  }
+  .portlogo{
+    transition: transform 1s;
+  }
+  .portlogo:hover{
+    transform: rotate(360deg);
+
   }
 
   .hamburger{

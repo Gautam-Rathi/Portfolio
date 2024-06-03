@@ -24,7 +24,7 @@ const Home = () => {
     {page?<section className="home">
       <div className="intro">
       <div className="home-container">
-        <h2>Welcome to My Portfolio</h2>
+        <h2>Welcome to My Portfolio,</h2>
         <div className='socials'>
         <img className='namelogo' src="./namelogo.png" alt="" />
         <NavLink to="https://www.linkedin.com/in/gautam-rathi-432753308/"><LinkedInIcon style={{color:"blue"}}/></NavLink>
