@@ -78,8 +78,8 @@ const ContactForm = () => {
         {
         page?<>
     <div className="contactdata"> My Mail & Phone No. -
-        <MailOutlineIcon onClick={()=>{return(toast.info("gautamrathicode@gmail.com"))}} style={{color:"red"}}/>
-        <LocalPhoneIcon onClick={()=>{return(toast.info("7289989372"))}} style={{color:"blue"}}/>
+        <MailOutlineIcon onClick={()=>{return(toast.info("gautamrathicode@gmail.com"))}} style={{color:"red",cursor:"pointer"}}/>
+        <LocalPhoneIcon onClick={()=>{return(toast.info("7289989372"))}} style={{color:"blue",cursor:"pointer"}}/>
 
     </div>
     <div className="contact-form">

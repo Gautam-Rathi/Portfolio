@@ -31,8 +31,8 @@ const Home = () => {
         <img className='namelogo' src="./namelogo.png" alt="" />
         <NavLink to="https://www.linkedin.com/in/gautam-rathi-432753308/"><LinkedInIcon style={{color:"blue"}}/></NavLink>
         <NavLink to="https://github.com/Gautam-Rathi"><GitHubIcon/></NavLink>
-        <MailOutlineIcon onClick={()=>{return(toast.info("gautamrathicode@gmail.com"))}} style={{color:"red"}}/>
-        <LocalPhoneIcon onClick={()=>{return(toast.info("7289989372"))}} style={{color:"blue"}}/>
+        <MailOutlineIcon onClick={()=>{return(toast.info("gautamrathicode@gmail.com"))}} style={{color:"red",cursor:"pointer"}}/>
+        <LocalPhoneIcon onClick={()=>{return(toast.info("7289989372"))}} style={{color:"blue",cursor:"pointer"}}/>
         
         
         </div>
