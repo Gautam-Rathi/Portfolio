@@ -35,6 +35,41 @@
     border-radius: 50%;
     width: 100px;
   }
+  .skillheadload{
+    
+    width: 145px;
+    margin: 0 auto;
+  }
+  .skillheadload .headskele{
+    margin-top: 30px;
+    height: 55px;
+    margin-bottom: 30px;
+  }
+  .skillload .skillloadskele{
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    width: 200px;
+    height: 45px;
+    margin-left: 20px;
+  }
+  .chain{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+  .chainele{
+    flex: 1;
+    height: 190px;
+    
+    width: 190px;
+
+  }
+
+
   
   @media (max-width: 768px) {
     /* .skill {

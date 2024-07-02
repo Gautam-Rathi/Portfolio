@@ -11,7 +11,25 @@
     margin-top: 20px;
     max-width: 400px;
     height: auto;
+    border: 5px solid;
+    animation: borderColorChange 3s linear 0s infinite;
   }
+  @keyframes borderColorChange {
+    0%{
+      border-color: lightblue;
+    }
+    30%{
+      border-color: violet;
+    }
+    60%{
+      border-color: #9c3bc9;
+    }
+    100%{
+      border-color: aqua;
+    }
+    
+  }
+  
   
   .project-details {
     margin-bottom: 10px;
@@ -50,6 +68,76 @@
     background-color: #555;
   }
   
+  .headprojele{
+    padding: 15px 0;
+    width: 140px;
+    margin: 0 auto;
+  }
+  .skeleheadproj{
+    height: 35px;
+  }
+  .imgprojele{
+    padding: 20px 0;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .skeleimgproj{
+    height: 200px;
+  }
+  .boxprojdetail{
+    padding: 10px 10px;
+  }
+  .projdetail{
+    border: 2px dotted lightblue;
+    border-radius: 10px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 10px;
+    display: flex;
+    flex-flow: column;
+    gap: 20px;    
+  }
+  .headprojdetailele{
+    margin: 0 auto;
+    max-width: 440px;
+  }
+  .skeleheadprojdetail{
+    height: 35px;
+  }
+  .detailprojeletitle1{
+    max-width: 400px;
+  }
+  .skeledetailprojeletitle1{
+    height: 25px;
+  }
+  .detailprojeletitle2{
+    max-width: 830px;
+  }
+  .skeledetailprojeletitle1{
+    height: 25px;
+  }
+  
+  .skeledetailprojeletitle3{
+    height: 25px;
+  }
+  .detailbtn{
+    display: flex;
+    gap: 20px;
+  }
+  .detailbtn1{
+    width: 130px;
+    height: 45px;
+  }
+  .detailbtn2{
+    width: 260px;
+    height: 45px;
+  }
+  .detailbtn3{
+    width: 260px;
+    height: 45px;
+  }
+
+
   @media (max-width:750px) {
     .project img{
         max-width: 300px;
@@ -57,5 +145,17 @@
     }
     .project-details{
         max-width: 100%;
+    }
+    .detailbtn{
+      flex-flow: column;
+    }
+    .imgprojele{
+      display: flex;
+      justify-content: center;
+    }
+    .skeleimgproj{
+
+      width: 300px;
+      border-radius: 50%;
     }
   }

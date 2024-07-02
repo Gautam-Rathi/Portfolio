@@ -8,6 +8,8 @@ import { Divider } from '@mui/material';
 import emailjs from '@emailjs/browser';
 import Box from '@mui/material/Box';
 import LinearProgress from '@mui/material/LinearProgress';
+import Skeleton,{SkeletonTheme} from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -20,7 +22,7 @@ const ContactForm = () => {
   useEffect(()=>{
     setTimeout(()=>{
       return(setPage(true))
-    },500)
+    },1000)
 
   },[])
 
@@ -117,11 +119,61 @@ const ContactForm = () => {
             
           ></textarea>
         </div>
-        <button type="submit" className="contactbtn">Submit</button>
+        <button type="submit" className="contactbtn btn">Submit</button>
       </form>
     </div>
     <ToastContainer/></>:<Box className="boxanimation" sx={{ width: '100%' }}>
     <LinearProgress />
+    <SkeletonTheme baseColor="lightblue" highlightColor="#9f5bf2">
+
+
+      <Skeleton/>
+      <div className="skelebox">
+
+      <div className="headcontactele">
+        <Skeleton className="skeleheadcontactele"/>
+      </div>
+      <Divider/>
+      <div className="formcontactele">
+        <div className="headformcontactele">
+          <Skeleton className='skeleheadformcontactele'/>
+        </div>
+        <div className="descformcontactele">
+          <Skeleton className='skeledescformcontactele'/>
+        </div>
+      </div>
+
+      <div className="formcontactele">
+        <div className="headformcontactele">
+          <Skeleton className='skeleheadformcontactele'/>
+        </div>
+        <div className="descformcontactele">
+          <Skeleton className='skeledescformcontactele'/>
+        </div>
+      </div>
+
+      <div className="formcontactele">
+        <div className="headformcontactele">
+          <Skeleton className='skeleheadformcontactele'/>
+        </div>
+        <div className="descformcontactele2">
+          <Skeleton className='skeledescformcontactele2'/>
+        </div>
+      </div>
+
+      <div className="btncontactele">
+        <Skeleton className="skelebtncontactele" />
+      </div>
+
+
+
+
+      </div>
+
+
+
+
+</SkeletonTheme>
   </Box>}
     </div>
   );

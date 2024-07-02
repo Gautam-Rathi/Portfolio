@@ -10,13 +10,15 @@ import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
   import Box from '@mui/material/Box';
 import LinearProgress from '@mui/material/LinearProgress';
+import Skeleton,{SkeletonTheme} from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const Home = () => {
   const [page,setPage] = useState(false);
   useEffect(()=>{
     setTimeout(()=>{
       return(setPage(true))
-    },500)
+    },1000)
 
   },[])
   return (
@@ -44,6 +46,20 @@ const Home = () => {
       </div>
       </div></section>:<Box className="boxanimation" sx={{ width: '100%' }}>
       <LinearProgress />
+      <SkeletonTheme baseColor="lightblue" highlightColor="#9f5bf2">
+      <div className="loader">
+      <div className="textloading">
+      <Skeleton className='headload'/>
+      <Skeleton className='logoload'/>
+      <Skeleton className='titleload'/>
+      <Skeleton className='descload'/>
+      <Skeleton className='btnload'/>
+      </div>
+      <div className="imgloading">
+        <Skeleton className='imgload'/>
+      </div>
+      </div>
+      </SkeletonTheme>
     </Box>}
       <ToastContainer />
       </>

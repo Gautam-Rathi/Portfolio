@@ -6,14 +6,23 @@ import { frontskills,backskills,programmingskills } from './skilldata';
 import { Divider } from '@mui/material';
 import Box from '@mui/material/Box';
 import LinearProgress from '@mui/material/LinearProgress';
+import Skeleton,{SkeletonTheme} from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const Skills = () => {
+    const screenWidth = window.innerWidth;
+    const numberEle = (screenWidth-(screenWidth%230))/230;
+    const arrele = new Array(numberEle+3);
+    for(let i=0;i<((screenWidth-(screenWidth%230))/230);i++){
+        arrele[i]=1;
+
+    }
 
     const [page,setPage] = useState(false);
   useEffect(()=>{
     setTimeout(()=>{
       return(setPage(true))
-    },500)
+    },1000)
 
   },[])
     const responsive = {
@@ -156,6 +165,48 @@ const Skills = () => {
                 </Carousel>
             </div></section>:<Box className="boxanimation" sx={{ width: '100%' }}>
       <LinearProgress />
+      <SkeletonTheme baseColor="lightblue" highlightColor="#9f5bf2">
+      
+      <div className='skillheadload'>
+        <Skeleton className='headskele'/></div>
+      <Divider/>
+      <div className="skillload">
+        <Skeleton className='skillloadskele'/>
+        <div className="chain">
+        {arrele.map((e,i)=>{
+            return <Skeleton key={i} className='chainele'/>
+
+        })}
+
+        </div>
+      </div>
+      <Divider/>
+      <div className="skillload">
+        <Skeleton className='skillloadskele'/>
+        <div className="chain">
+            
+        {arrele.map((e,i)=>{
+            return <Skeleton key={i} className='chainele'/>
+
+        })}
+            
+
+        </div>
+      </div>
+      <Divider/>
+      <div className="skillload">
+      <Skeleton className='skillloadskele'/>
+
+        <div className="chain">
+        {arrele.map((e,i)=>{
+            return <Skeleton key={i} className='chainele'/>
+
+        })}
+
+        </div>
+      </div>
+      </SkeletonTheme>
+
     </Box>}
     </>
         

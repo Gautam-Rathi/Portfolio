@@ -18,6 +18,7 @@
   }
   .contactdata{
     text-align: center;
+    align-items: center;
     background-color: #dedede;
     display: flex;
     justify-content: center;
@@ -34,6 +35,10 @@
   .form-group {
     margin-top: 10px;
     margin-bottom: 20px;
+  }
+  .form-group textarea{
+
+    resize: none;
   }
   
   .form-group label {
@@ -70,6 +75,47 @@
   .btn:hover {
     background-color: #555;
   }
+
+
+  .skelebox{
+    max-width: 600px;
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 80vh;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  .headcontactele{
+    
+    width: 180px;
+    margin: 0 auto;
+  }
+  .skeleheadcontactele{
+    height: 35px;
+    /* width: 100%; */
+  }
+  .headformcontactele{
+    width: 70px;
+    padding: 10px 0;
+  }
+  .skeleheadformcontactele{
+
+    height: 25px;
+  }
+  .skeledescformcontactele{
+    height: 35px;
+  }
+  .skeledescformcontactele2{
+    height: 170px;
+    
+  }
+  .skelebtncontactele{
+    height: 35px;
+
+  }
   
   @media (max-width: 768px) {
     .contact-form {
@@ -77,6 +123,9 @@
     }
     .contact-form h1 {
         padding-bottom: 40px;
+      }
+      .skelebox{
+        height: auto;
       }
 
   }
